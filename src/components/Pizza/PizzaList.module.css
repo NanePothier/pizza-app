@@ -1,0 +1,21 @@
+.list {
+  display: inline-block;
+  width: 570px;
+  vertical-align: middle;
+}
+
+.list ul {
+  padding: 0;
+}
+
+.next {
+  content: url('../../assets/outline_navigate_next_black_24dp.png');
+  border-radius: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.next:hover {
+  background-color: lightgrey;
+  border-radius: 30px;
+}

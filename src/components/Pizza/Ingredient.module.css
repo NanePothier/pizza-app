@@ -1,0 +1,16 @@
+.ingredient {
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 0 2px 8px rgba(37, 35, 35, 0.25);
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.highlight {
+  border: 2px solid #e60000;
+}
