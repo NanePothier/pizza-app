@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import SummaryItem from './SummaryItem';
 import classes from './PizzaSummary.module.css';
+import CartContext from '../../store/cart-context';
 
 const PizzaSummary = (props) => {
+  const cartCtx = useContext(CartContext);
+
   const ingredientList = props.ingredients.map((ingredient) => {
     return <SummaryItem key={ingredient.id} name={ingredient.name} />;
   });
+
+  const addPizzaToCartHandler = () => {
+    const newPizza = {
+      pizzaIngredients: [...props.ingredients],
+      totalPrice: props.totalPrice
+    };
+
+    cartCtx.addPizza(newPizza);
+  }
 
   return (
     <section>
@@ -21,7 +33,7 @@ const PizzaSummary = (props) => {
       </div>
       <div className={classes.buttons}>
         <button className={classes.cancel}>Cancel</button>
-        <button className={classes.cart}>Add to Cart</button>
+        <button className={classes.cart} onClick={addPizzaToCartHandler}>Add to Cart</button>
       </div>
     </section>
   );
