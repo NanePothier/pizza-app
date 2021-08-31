@@ -1,5 +1,19 @@
+.summary {
+  border: 1px solid black;
+  border-radius: 12px;
+  box-shadow: 2px 3px 8px rgba(17, 16, 16, 0.356);
+  width: 400px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+ul {
+  margin: 0;
+}
+
 .heading {
   text-decoration: underline red;
+  font-size: 19px;
 }
 
 .ingredients ul {
@@ -7,8 +21,15 @@
   padding: 0;
 }
 
+.info {
+  padding: 25px 0 20px 0;
+  width: 270px;
+  margin: auto;
+  color: grey;
+}
+
 .total {
-  padding: 10px 0 5px 0;
+  padding: 5px 0 15px 0;
   font-size: 19px;
   font-weight: bold;
 }

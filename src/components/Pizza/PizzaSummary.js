@@ -5,6 +5,7 @@ import CartContext from '../../store/cart-context';
 
 const PizzaSummary = (props) => {
   const cartCtx = useContext(CartContext);
+  const info = 'Every pizza comes with red sauce and delicious cheese!';
 
   const ingredientList = props.ingredients.map((ingredient) => {
     return <SummaryItem key={ingredient.id} name={ingredient.name} />;
@@ -20,13 +21,16 @@ const PizzaSummary = (props) => {
   }
 
   return (
-    <section>
+    <section className={classes.summary}>
       <div className={classes.heading}>
-        <h2>Your Pizza:</h2>
+        <h3>Your Pizza:</h3>
       </div>
       <section className={classes.ingredients}>
         <ul>{ingredientList}</ul>
       </section>
+      <div className={classes.info}>
+        {info}
+      </div>
       <div className={classes.total}>
         <span>Total price for this pizza:</span>
         <span>{`  $${props.totalPrice}`}</span>
