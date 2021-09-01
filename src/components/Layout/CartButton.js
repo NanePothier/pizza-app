@@ -8,7 +8,7 @@ const CartButton = (props) => {
   const numCartItems = cartCtx.pizzaItems.length;
 
   return (
-    <button className={classes.button}>
+    <button className={classes.button} onClick={props.onClick}>
       <span>Cart</span>
       <span className={classes['num-items']}>{numCartItems}</span>
     </button>

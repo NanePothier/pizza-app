@@ -8,7 +8,8 @@ const defaultCartState = {
 
 const cartReducer = (prevState, action) => {
   if (action.type === 'ADD') {
-    const updatedPizzaItems = prevState.pizzaItems.concat(action.item);
+    const updatedPizzaItems = [...prevState.pizzaItems];
+    updatedPizzaItems.push(action.item);
     const updatedTotalAmount = prevState.totalAmount + action.item.totalPrice;
 
     return {
@@ -32,7 +33,7 @@ const CartProvider = (props) => {
 
     const newPizza = {
       id: id,
-      ingredients: [pizza.pizzaIngredients],
+      ingredients: pizza.ingredients,
       totalPrice: pizza.totalPrice,
     };
 

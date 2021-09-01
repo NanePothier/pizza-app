@@ -9,7 +9,6 @@ const Ingredient = (props) => {
   });
 
   if (!ingredient) {
-    console.log('ing is not in pizza state');
     ingClasses = `${classes.ingredient}`;
   } else {
     ingClasses = `${classes.ingredient} ${classes.highlight}`;
