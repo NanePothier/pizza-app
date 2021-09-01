@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './CartItem.module.css';
 
 const CartItem = (props) => {
   const ingredients = props.ingredients.map((ingredient) => {
@@ -6,10 +7,10 @@ const CartItem = (props) => {
   });
 
   return (
-    <li>
+    <li className={classes.item}>
       <div>
-        <span>Pizza</span>
-        <span>{props.totalPrice}</span>
+        <span>Pizza:</span>
+        <span className={classes.total}>{`$${props.totalPrice}`}</span>
       </div>
       <ul>{ingredients}</ul>
     </li>

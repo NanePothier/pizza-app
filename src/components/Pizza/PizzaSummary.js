@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import SummaryItem from './SummaryItem';
 import classes from './PizzaSummary.module.css';
 import CartContext from '../../store/cart-context';
+import ConfirmButton from '../UI/ConfirmButton';
+import CancelButton from '../UI/CancelButton';
 
 const PizzaSummary = (props) => {
   const cartCtx = useContext(CartContext);
@@ -39,12 +41,16 @@ const PizzaSummary = (props) => {
         <span>{`  $${props.totalPrice}`}</span>
       </div>
       <div className={classes.buttons}>
-        <button className={classes.cancel} onClick={cancelPizzaHandler}>
-          Cancel
-        </button>
-        <button className={classes.cart} onClick={addPizzaToCartHandler}>
-          Add to Cart
-        </button>
+        <CancelButton
+          btnTitle="Cancel"
+          onClick={cancelPizzaHandler}
+          disabled={false}
+        />
+        <ConfirmButton
+          btnTitle="Add to Cart"
+          onClick={addPizzaToCartHandler}
+          disabled={false}
+        />
       </div>
     </section>
   );

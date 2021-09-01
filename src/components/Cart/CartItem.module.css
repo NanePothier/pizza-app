@@ -1,0 +1,22 @@
+.item {
+  position: relative;
+  padding-top: 8px;
+  font-size: 17px;
+}
+
+.item span:first-of-type {
+  font-weight: bold;
+  color: #990000;
+}
+
+ul {
+  padding: 15px 0 5px 0;
+  margin-left: 15px;
+  list-style: none;
+}
+
+.total {
+  position: absolute;
+  top: 8px;
+  left: 205px;
+}
