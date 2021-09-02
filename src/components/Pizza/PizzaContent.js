@@ -104,6 +104,10 @@ const PizzaContent = (props) => {
     dispatchPizzaAction({ type: 'ADVANCE' });
   };
 
+  const resetPizzaStateHandler = () => {
+    dispatchPizzaAction({ type: 'RESET' });
+  };
+
   return (
     <React.Fragment>
       {pizzaState.currentScreen === 'start' && (
@@ -115,13 +119,14 @@ const PizzaContent = (props) => {
           type={pizzaState.curIngType}
           selectIngredient={selectedIngredientHandler}
           advance={advanceHandler}
-          pizzaIngArray = {pizzaState.ingredients}
+          pizzaIngArray={pizzaState.ingredients}
         />
       )}
       {pizzaState.currentScreen === 'summary' && (
         <PizzaSummary
           ingredients={pizzaState.ingredients}
           totalPrice={pizzaState.totalPrice}
+          resetPizzaState={resetPizzaStateHandler}
         />
       )}
     </React.Fragment>

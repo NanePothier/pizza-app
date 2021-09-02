@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartContext = React.createContext({
-  items: [],
+  pizzaItems: [],
   totalAmount: 0,
   addPizza: () => {},
   removePizza: () => {},

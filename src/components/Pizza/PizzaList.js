@@ -15,6 +15,8 @@ const PizzaList = (props) => {
         name={ingredient.name}
         type={ingredient.type}
         price={ingredient.price}
+        image={ingredient.image.src}
+        altText={ingredient.image.alt}
         selectIngredient={props.selectIngredient}
         pizzaIngArray={props.pizzaIngArray}
       />

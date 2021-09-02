@@ -1,0 +1,20 @@
+.confirm {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(20, 20, 20, 0.3);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 14px;
+  margin-left: 2px;
+  box-sizing: border-box;
+  height: 45px;
+  cursor: pointer;
+}
+
+.confirm:hover,
+.confirm:active {
+  background-color: #990000;
+}

@@ -1,0 +1,47 @@
+.heading {
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  font-size: 19px;
+  font-weight: bold;
+  width: 300px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.summary {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.summary ol {
+  width: 210px;
+  margin: auto;
+  text-align: left;
+  padding: 0px;
+}
+
+.total {
+  border-top: 1px solid grey;
+  padding-top: 15px;
+  width: 300px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.total span {
+  font-weight: bold;
+}
+
+.buttons {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.empty,
+.empty-button {
+  text-align: center;
+}
+
+.empty {
+  padding: 20px 0 20px 0;
+}

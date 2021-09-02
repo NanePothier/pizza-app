@@ -6,11 +6,20 @@
   height: 150px;
   display: inline-block;
   border-radius: 12px;
-  padding: 20px;
   margin: 8px;
+  padding: 20px 20px 30px 20px;
   cursor: pointer;
 }
 
 .highlight {
   border: 2px solid #e60000;
+}
+
+img {
+  width: 170px;
+  height: 120px;
+}
+
+.title {
+  font-weight: bold;
 }
