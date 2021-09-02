@@ -20,7 +20,8 @@ const Ingredient = (props) => {
 
   return (
     <li className={ingClasses} onClick={selectIngredientHandler}>
-      <h3>{props.name}</h3>
+      <img src={props.image} alt={props.altText} />
+      <div className={classes.title}>{props.name}</div>
       <div>{props.price === 0 ? '' : `+ $${props.price}`}</div>
     </li>
   );
