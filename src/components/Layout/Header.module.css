@@ -5,9 +5,22 @@
   padding: 20px;
   padding-left: 50px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 h2 {
   display: inline-block;
+}
+
+.main-image {
+  background-image: url('../../assets/pizza_main.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 930px;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  z-index: -10;
 }
