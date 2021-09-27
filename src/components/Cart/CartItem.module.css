@@ -1,7 +1,7 @@
 .item {
   position: relative;
   padding-top: 8px;
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .item span:first-of-type {
@@ -19,4 +19,10 @@ ul {
   position: absolute;
   top: 8px;
   left: 205px;
+}
+
+@media (max-width: 40rem) {
+  .total {
+    left: 165px;
+  }
 }

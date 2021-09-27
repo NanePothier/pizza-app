@@ -19,3 +19,11 @@
   background-color: lightgrey;
   border-radius: 30px;
 }
+
+@media (max-width: 40rem) {
+  .next {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+}

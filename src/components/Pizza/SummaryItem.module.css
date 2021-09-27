@@ -1,7 +1,14 @@
 .item {
-    font-size: 18px;
-    padding: 10px 0;
-    border-bottom: 1px solid lightgrey;
-    width: 270px;
-    margin: auto;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgrey;
+  width: 270px;
+  margin: auto;
+}
+
+@media (max-width: 40rem) {
+  .item {
+    font-size: 0.9rem;
+    width: 150px;
+  }
 }

@@ -23,3 +23,15 @@ img {
 .title {
   font-weight: bold;
 }
+
+@media (max-width: 40rem) {
+  .ingredient {
+    width: 100px;
+    height: 80px;
+  }
+
+  img {
+    width: 70px;
+    height: 50px;
+  }
+}

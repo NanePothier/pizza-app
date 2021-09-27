@@ -41,14 +41,14 @@ const PizzaSummary = (props) => {
         <span>{`  $${props.totalPrice}`}</span>
       </div>
       <div className={classes.buttons}>
-        <CancelButton
-          btnTitle="Cancel"
-          onClick={cancelPizzaHandler}
-          disabled={false}
-        />
         <ConfirmButton
           btnTitle="Add to Cart"
           onClick={addPizzaToCartHandler}
+          disabled={false}
+        />
+        <CancelButton
+          btnTitle="Cancel"
+          onClick={cancelPizzaHandler}
           disabled={false}
         />
       </div>
