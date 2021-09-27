@@ -5,8 +5,17 @@
   border-radius: 12px;
   padding: 25px;
   position: absolute;
-  top: 80px;
-  left: 400px;
+  top: 120px;
+  left: 50%;
+  margin-left: -262px;
   z-index: 11;
   text-align: center;
+}
+
+@media (max-width: 40rem) {
+  .modal {
+    width: 240px;
+    left: 5px;
+    margin-left: 5px;
+  }
 }

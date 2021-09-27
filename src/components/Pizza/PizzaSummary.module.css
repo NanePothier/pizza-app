@@ -7,17 +7,14 @@
   padding: 30px 20px;
 }
 
-ul {
-  margin: 0;
-}
-
 .heading {
   text-decoration: underline red;
-  font-size: 19px;
+  font-size: 1.2rem;
 }
 
 .ingredients ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -30,10 +27,30 @@ ul {
 
 .total {
   padding: 5px 0 15px 0;
-  font-size: 19px;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 .buttons {
   margin: 15px 0;
+}
+
+@media (max-width: 40rem) {
+  .summary {
+    width: 170px;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  .info {
+    font-size: 0.8rem;
+    width: 150px;
+    padding-top: 10px;
+  }
+
+  .total {
+    font-size: 1rem;
+  }
 }

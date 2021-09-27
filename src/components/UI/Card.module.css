@@ -2,10 +2,21 @@
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(20, 20, 20, 0.3);
-  width: 710px;
+  width: 70%;
+  min-width: 695px;
+  max-width: 785px;
   padding: 20px 0px;
   margin-bottom: 20px;
   text-align: center;
   margin: auto;
   margin-top: 20px;
+}
+
+@media (max-width: 40rem) {
+  .card {
+    width: 80%;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,7 +1,7 @@
 .heading {
   border-bottom: 1px solid grey;
   padding-bottom: 15px;
-  font-size: 19px;
+  font-size: 1.2rem;
   font-weight: bold;
   width: 300px;
   margin: auto;
@@ -25,7 +25,7 @@
   padding-top: 15px;
   width: 300px;
   margin: auto;
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 
 .total span {
@@ -44,4 +44,18 @@
 
 .empty {
   padding: 20px 0 20px 0;
+}
+
+@media (max-width: 40rem) {
+  .heading {
+    width: 200px;
+  }
+
+  .total {
+    width: 200px;
+  }
+
+  .summary ol {
+    width: 180px;
+  }
 }
