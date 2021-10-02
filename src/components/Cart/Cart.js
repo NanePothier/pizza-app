@@ -1,20 +1,26 @@
-import React, { useContext } from 'react';
-import classes from './Cart.module.css';
-import Modal from '../UI/Modal';
-import CartContext from '../../store/cart-context';
-import CartItem from './CartItem';
-import CancelButton from '../UI/CancelButton';
-import ConfirmButton from '../UI/ConfirmButton';
+import React, { useContext } from "react";
+import classes from "./Cart.module.css";
+import Modal from "../UI/Modal";
+import CartContext from "../../store/cart-context";
+import CartItem from "./CartItem";
+import CancelButton from "../UI/CancelButton";
+import ConfirmButton from "../UI/ConfirmButton";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
+
+  const removePizzaHandler = (id) => {
+    cartCtx.removePizza(id);
+  };
 
   const pizzaItems = cartCtx.pizzaItems.map((pizza) => {
     return (
       <CartItem
         key={pizza.id}
+        id={pizza.id}
         ingredients={pizza.ingredients}
         totalPrice={pizza.totalPrice}
+        removePizza={removePizzaHandler}
       />
     );
   });
@@ -29,7 +35,7 @@ const Cart = (props) => {
         <div className={classes.empty}>
           There are currently no items in the cart.
         </div>
-        <div className={classes['empty-button']}>
+        <div className={classes["empty-button"]}>
           <CancelButton
             btnTitle="Close"
             onClick={props.onHideCart}

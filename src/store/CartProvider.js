@@ -1,5 +1,5 @@
-import React, { useReducer } from 'react';
-import CartContext from './cart-context';
+import React, { useReducer } from "react";
+import CartContext from "./cart-context";
 
 const defaultCartState = {
   pizzaItems: [],
@@ -7,7 +7,7 @@ const defaultCartState = {
 };
 
 const cartReducer = (prevState, action) => {
-  if (action.type === 'ADD') {
+  if (action.type === "ADD") {
     const updatedPizzaItems = [...prevState.pizzaItems];
     updatedPizzaItems.push(action.item);
     const updatedTotalAmount = prevState.totalAmount + action.item.totalPrice;
@@ -16,7 +16,20 @@ const cartReducer = (prevState, action) => {
       pizzaItems: updatedPizzaItems,
       totalAmount: updatedTotalAmount,
     };
-  } else if (action.type === 'REMOVE') {
+  } else if (action.type === "REMOVE") {
+    const pizza = prevState.pizzaItems.find((pizza) => {
+      return pizza.id === action.pizzaId;
+    });
+
+    const updatedPizzaItems = prevState.pizzaItems.filter((pizza) => {
+      return pizza.id !== action.pizzaId;
+    });
+    const updatedTotalAmount = prevState.totalAmount - pizza.totalPrice;
+
+    return {
+      pizzaItems: updatedPizzaItems,
+      totalAmount: updatedTotalAmount,
+    };
   }
 
   return defaultCartState;
@@ -37,10 +50,12 @@ const CartProvider = (props) => {
       totalPrice: pizza.totalPrice,
     };
 
-    dispatchCartAction({ type: 'ADD', item: newPizza });
+    dispatchCartAction({ type: "ADD", item: newPizza });
   };
 
-  const removePizzaHandler = () => {};
+  const removePizzaHandler = (id) => {
+    dispatchCartAction({ type: "REMOVE", pizzaId: id });
+  };
 
   const cartContext = {
     pizzaItems: cartState.pizzaItems,
