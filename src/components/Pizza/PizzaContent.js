@@ -111,7 +111,12 @@ const PizzaContent = (props) => {
   return (
     <React.Fragment>
       {pizzaState.currentScreen === 'start' && (
-        <Button btnTitle={title} onClick={startCreatingPizza} />
+        <Button
+          btnTitle={title}
+          onClick={startCreatingPizza}
+          btnClass="dark-red"
+          disabled={false}
+        />
       )}
       {pizzaState.currentScreen === 'selection' && (
         <PizzaList

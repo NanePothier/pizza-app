@@ -3,18 +3,23 @@ import classes from './Cart.module.css';
 import Modal from '../UI/Modal';
 import CartContext from '../../store/cart-context';
 import CartItem from './CartItem';
-import CancelButton from '../UI/CancelButton';
-import ConfirmButton from '../UI/ConfirmButton';
+import Button from '../UI/Button';
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
+
+  const removePizzaHandler = (id) => {
+    cartCtx.removePizza(id);
+  };
 
   const pizzaItems = cartCtx.pizzaItems.map((pizza) => {
     return (
       <CartItem
         key={pizza.id}
+        id={pizza.id}
         ingredients={pizza.ingredients}
         totalPrice={pizza.totalPrice}
+        removePizza={removePizzaHandler}
       />
     );
   });
@@ -30,9 +35,10 @@ const Cart = (props) => {
           There are currently no items in the cart.
         </div>
         <div className={classes['empty-button']}>
-          <CancelButton
+          <Button
             btnTitle="Close"
             onClick={props.onHideCart}
+            btnClass="white"
             disabled={false}
           />
         </div>
@@ -50,14 +56,16 @@ const Cart = (props) => {
         Total amount for this order: <span>{totalAmount}</span>
       </div>
       <div className={classes.buttons}>
-        <CancelButton
+        <Button
           btnTitle="Close"
           onClick={props.onHideCart}
+          btnClass="white"
           disabled={false}
         />
-        <ConfirmButton
+        <Button
           btnTitle="Checkout"
           onClick={checkoutHandler}
+          btnClass="red"
           disabled={false}
         />
       </div>

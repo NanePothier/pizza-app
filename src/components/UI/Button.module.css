@@ -1,4 +1,4 @@
-.button {
+.dark-red {
   background-color: #990000;
   color: white;
   cursor: pointer;
@@ -11,7 +11,56 @@
   margin: auto;
 }
 
-.button:hover,
-.button:active {
+.dark-red:hover,
+.dark-red:active {
   background-color: #e60000;
+}
+
+.red {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(20, 20, 20, 0.3);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 14px;
+  margin: 2px;
+  box-sizing: border-box;
+  height: 45px;
+  cursor: pointer;
+}
+
+.red:hover,
+.red:active {
+  background-color: #990000;
+}
+
+.white {
+  background-color: white;
+  color: #e60000;
+  border: 1px solid #e60000;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(20, 20, 20, 0.3);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 14px;
+  margin: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.white:hover,
+.white:active {
+  background-color: #990000;
+  color: white;
+  border: 1px solid #990000;
+}
+
+.small {
+  font-size: 0.9rem;
+  padding: 2px 10px;
+  height: 30px;
 }

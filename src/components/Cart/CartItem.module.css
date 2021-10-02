@@ -1,6 +1,6 @@
 .item {
   position: relative;
-  padding-top: 8px;
+  padding-top: 12px;
   font-size: 1rem;
 }
 
@@ -17,8 +17,13 @@ ul {
 
 .total {
   position: absolute;
-  top: 8px;
+  top: 12px;
   left: 205px;
+}
+
+.remove {
+  margin-top: 2px;
+  margin-left: 160px;
 }
 
 @media (max-width: 40rem) {

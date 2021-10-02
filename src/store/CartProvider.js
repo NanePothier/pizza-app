@@ -17,6 +17,19 @@ const cartReducer = (prevState, action) => {
       totalAmount: updatedTotalAmount,
     };
   } else if (action.type === 'REMOVE') {
+    const pizza = prevState.pizzaItems.find((pizza) => {
+      return pizza.id === action.pizzaId;
+    });
+
+    const updatedPizzaItems = prevState.pizzaItems.filter((pizza) => {
+      return pizza.id !== action.pizzaId;
+    });
+    const updatedTotalAmount = prevState.totalAmount - pizza.totalPrice;
+
+    return {
+      pizzaItems: updatedPizzaItems,
+      totalAmount: updatedTotalAmount,
+    };
   }
 
   return defaultCartState;
@@ -40,7 +53,9 @@ const CartProvider = (props) => {
     dispatchCartAction({ type: 'ADD', item: newPizza });
   };
 
-  const removePizzaHandler = () => {};
+  const removePizzaHandler = (id) => {
+    dispatchCartAction({ type: 'REMOVE', pizzaId: id });
+  };
 
   const cartContext = {
     pizzaItems: cartState.pizzaItems,
