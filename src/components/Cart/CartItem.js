@@ -1,5 +1,5 @@
 import React from "react";
-import ConfirmButton from "../UI/ConfirmButton";
+import Button from "../UI/Button";
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
@@ -18,11 +18,14 @@ const CartItem = (props) => {
         <span className={classes.total}>{`$${props.totalPrice}`}</span>
       </div>
       <ul>{ingredients}</ul>
-      <ConfirmButton
-        btnTitle="Remove"
-        disabled={false}
-        onClick={removePizzaHandler}
-      />
+      <div className={classes.remove}>
+        <Button
+          btnTitle="Remove"
+          onClick={removePizzaHandler}
+          btnClass="red small"
+          disabled={false}
+        />
+      </div>
     </li>
   );
 };
