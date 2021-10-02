@@ -43,13 +43,13 @@ const PizzaSummary = (props) => {
         <Button
           btnTitle="Add to Cart"
           onClick={addPizzaToCartHandler}
-          btnClass='red'
+          btnClass="red"
           disabled={false}
         />
         <Button
           btnTitle="Cancel"
           onClick={cancelPizzaHandler}
-          btnClass='white'
+          btnClass="white"
           disabled={false}
         />
       </div>

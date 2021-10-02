@@ -1,6 +1,6 @@
-import React from "react";
-import Button from "../UI/Button";
-import classes from "./CartItem.module.css";
+import React from 'react';
+import Button from '../UI/Button';
+import classes from './CartItem.module.css';
 
 const CartItem = (props) => {
   const ingredients = props.ingredients.map((ingredient) => {

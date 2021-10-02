@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import classes from "./Cart.module.css";
-import Modal from "../UI/Modal";
-import CartContext from "../../store/cart-context";
-import CartItem from "./CartItem";
-import Button from "../UI/Button";
+import React, { useContext } from 'react';
+import classes from './Cart.module.css';
+import Modal from '../UI/Modal';
+import CartContext from '../../store/cart-context';
+import CartItem from './CartItem';
+import Button from '../UI/Button';
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
@@ -34,11 +34,11 @@ const Cart = (props) => {
         <div className={classes.empty}>
           There are currently no items in the cart.
         </div>
-        <div className={classes["empty-button"]}>
+        <div className={classes['empty-button']}>
           <Button
             btnTitle="Close"
             onClick={props.onHideCart}
-            btnClass='white'
+            btnClass="white"
             disabled={false}
           />
         </div>
@@ -59,13 +59,13 @@ const Cart = (props) => {
         <Button
           btnTitle="Close"
           onClick={props.onHideCart}
-          btnClass='white'
+          btnClass="white"
           disabled={false}
         />
         <Button
           btnTitle="Checkout"
           onClick={checkoutHandler}
-          btnClass='red'
+          btnClass="red"
           disabled={false}
         />
       </div>

@@ -1,12 +1,12 @@
-import React from "react";
-import classes from "./Button.module.css";
+import React from 'react';
+import classes from './Button.module.css';
 
 const Button = (props) => {
   let styles = props.btnClass;
-  let btnClasses = "";
+  let btnClasses = '';
 
-  if (styles.includes(" ")) {
-    const index = styles.indexOf(" ");
+  if (styles.includes(' ')) {
+    const index = styles.indexOf(' ');
     const first = styles.slice(0, index);
     const second = styles.slice(index + 1);
     btnClasses = `${classes[first]} ${classes[second]}`;
